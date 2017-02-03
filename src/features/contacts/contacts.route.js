@@ -1,7 +1,7 @@
 const express = require('express');
 const validate = require('express-validation');
-const paramValidation = require('../../config/param-validation');
-const contactCtrl = require('../controllers/contact.controller');
+const paramValidation = require('./contacts.validation');
+const contactCtrl = require('./contacts.controller.js');
 
 const router = express.Router();
 

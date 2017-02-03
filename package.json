@@ -13,7 +13,7 @@
     "test": "cross-env NODE_ENV=test node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha -- --ui bdd --reporter spec --colors --compilers js:babel-core/register ./src/**/*.test.js",
     "test:watch": "yarn test -- --watch",
     "test:check-coverage": "yarn test && istanbul check-coverage",
-    "report-coverage": "coveralls < ./coverage/lcov.info"
+    "report-coverage": "coveralls < ./reports/coverage/lcov.info"
   },
   "repository": {
     "type": "git",

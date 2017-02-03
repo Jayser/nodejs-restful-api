@@ -10,7 +10,7 @@ const expressWinston = require('express-winston');
 const expressValidation = require('express-validation');
 const helmet = require('helmet');
 const winstonInstance = require('./winston');
-const routes = require('../src/routes/index.route');
+const routes = require('../src/index');
 const config = require('./env');
 const APIError = require('../src/helpers/APIError');
 

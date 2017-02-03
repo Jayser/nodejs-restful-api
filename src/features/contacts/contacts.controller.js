@@ -1,4 +1,4 @@
-const Contact = require('../models/contact.model');
+const Contact = require('./contacts.model.js');
 
 /**
  * Load contact and append to req.
@@ -24,14 +24,14 @@ function get(req, res) {
  * Create new contact
  * @property {string} req.body.firstName - The first name of contact.
  * @property {string} req.body.lastName - The last name of contact.
- * @property {string} req.body.mobileNumber - The mobile number of contact.
+ * @property {string} req.body.phoneNumber - The phone number of contact.
  * @returns {Contact}
  */
 function create(req, res, next) {
   const contact = new Contact({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    mobileNumber: req.body.mobileNumber
+    phoneNumber: req.body.phoneNumber
   });
 
   contact.save()
