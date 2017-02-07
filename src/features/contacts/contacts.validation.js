@@ -2,7 +2,7 @@ const Joi = require('joi');
 
 module.exports = {
   // POST /api/contacts
-  createUser: {
+  createContact: {
     body: {
       firstName: Joi.string().required(),
       lastName: Joi.string().required(),
@@ -11,14 +11,14 @@ module.exports = {
   },
 
   // UPDATE /api/users/:userId
-  updateUser: {
+  updateContact: {
     body: {
       firstName: Joi.string().required(),
       lastName: Joi.string().required(),
       phoneNumber: Joi.string().required()
     },
     params: {
-      userId: Joi.string().hex().required()
+      contactId: Joi.string().hex().required()
     }
   }
 };

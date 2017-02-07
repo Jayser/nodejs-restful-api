@@ -6,6 +6,8 @@ const Contact = require('./contacts.model.js');
 function load(req, res, next, id) {
   Contact.get(id)
     .then((contact) => {
+      console.log(JSON.stringify(contact))
+      console.log(JSON.stringify(contact))
       req.contact = contact; // eslint-disable-line no-param-reassign
       return next();
     })
@@ -50,7 +52,7 @@ function update(req, res, next) {
   const contact = req.contact;
   contact.firstName = req.body.firstName;
   contact.lastName = req.body.lastName;
-  contact.mobileNumber = req.body.mobileNumber;
+  contact.phoneNumber = req.body.phoneNumber;
 
   contact.save()
     .then(savedContact => res.json(savedContact))
